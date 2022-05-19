@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define DELIM " \n\t"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -34,7 +35,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+extern FILE *fileopen = NULL;
 int main(int argc, char *argv[])
 
 

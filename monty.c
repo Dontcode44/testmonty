@@ -1,5 +1,5 @@
 #include "monty.h"
-
+FILE *fileopen = NULL;
 /**
  * main - Main of the project
  * @argc:
@@ -8,20 +8,20 @@
  */
 int main(int argc, char *argv[])
 {
-	char *buffer;
-	char *tkn;
-
-	fileopen = fopen(argv[1], "r");
-
+	
+	char *token = NULL;
+	
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+	fileopen = fopen(argv[1], "r");
+	
 	if (!fileopen)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	return (fileopen)
+	return (fileopen);
 }
