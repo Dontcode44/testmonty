@@ -8,9 +8,6 @@ FILE *fileopen = NULL;
  */
 int main(int argc, char *argv[])
 {
-	
-	char *token = NULL;
-	
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
