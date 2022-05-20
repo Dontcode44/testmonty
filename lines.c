@@ -10,6 +10,7 @@ FILE *lines(FILE *openfile)
 	char buffer[BUFSIZ];
 	unsigned int line_number = 1;
 	stack_t *head = NULL;
+	void (*get_opcode)(stack_t **, unsigned int);
 
 	while (fgets(buffer, sizeof(buffer), openfile) != NULL)
 	{
@@ -19,12 +20,13 @@ FILE *lines(FILE *openfile)
 			line_number++;
 			continue;
 		}
+		get_opcode = get_func(token);
+		get_opcode(&head, line_number);
 
-		get_func(&head, line_number);
 
 		line_number++;
 	}
 	free_stack(head);
 
-	return (openfile);
+	return (fileopen);
 }
