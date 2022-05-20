@@ -8,9 +8,6 @@ FILE *fileopen = NULL;
  */
 int main(int argc, char *argv[])
 {
-	
-	char *token = NULL;
-	
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -23,5 +20,5 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	return (fileopen);
+	return (*fileopen);
 }

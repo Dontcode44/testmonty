@@ -2,20 +2,17 @@
 
 /**
  * free_stack - Free all from stack
- *
- *
+ * @head: list
+ * Return nothing
  */
-void free_stack(stack_t **stack)
+void free_stack(stack_t *head)
 {
-	stack_t *tofree;
+	stack_t *node = head;
 
-	if (*stack == NULL)
-		return;
-
-	tofree = stack;
-	if (stack != NULL)
+	while (head)
 	{
-		free_stack(tofree->next);
-		free(tofree);
+		node = node->next;
+		free(head);
+		head = node;
 	}
 }

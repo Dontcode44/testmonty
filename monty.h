@@ -2,10 +2,17 @@
 #define MONTY_H
 #define DELIM " \n\t"
 
+#include <unistd.h>
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+#include <sys/types.h>
+#include <string.h>
+#include <ctype.h>
 
-extern char *fileopen = NULL;
+
+extern FILE *fileopen;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -39,7 +46,8 @@ typedef struct instruction_s
 
 int main(int argc, char *argv[]);
 void push(stack_t **stack, unsigned int line_number);
-void free_stack(stack_t **stack);
+void free_stack(stack_t *stack);
 void pall(stack_t **stack, unsigned int lines);
+void (*get_func(char *opcode))(stack_t **stack, unsigned int line_number);
 
 #endif
