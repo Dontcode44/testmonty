@@ -1,3 +1,9 @@
+#include "monty.h"
+/**
+ * lines - tokenize the lines
+ * @fileopen: monty file
+ * Return FILE
+ */
 FILE *lines(FILE *fileopen)
 {
 	char *token = NULL;
