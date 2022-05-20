@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * get_operation - Select the opcode to execute.
+ * get_func - Select the opcode to execute.
  * @opcode: instruction to execute.
  * Return: no return.
  */
