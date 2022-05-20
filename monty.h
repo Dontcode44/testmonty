@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+extern char *fileopen = NULL;
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -35,8 +37,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern FILE *fileopen = NULL;
-int main(int argc, char *argv[])
-
+int main(int argc, char *argv[]);
+void push(stack_t **stack, unsigned int line_number);
 
 #endif

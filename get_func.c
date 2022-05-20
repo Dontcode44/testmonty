@@ -10,8 +10,7 @@
 void (*get_func(char *opcode))(stack_t **stack, unsigned int line_number)
 {
 	instruction_t list[] = {
-		{"push", push}, {"pall", pall}
-		};
+		{"push", _push}, {"pall", _pall}, {NULL, NULL}};
 
 	int i = 0;
 	if (!opcode)
