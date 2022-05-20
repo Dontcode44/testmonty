@@ -2,8 +2,8 @@
 
 /**
  * push - Push an element to the stack.
- * @head:
- * @line_number:
+ * @head: Header
+ * @line_number: Line number
  * Return: nothing.
  */
 void _push(stack_t **stack, unsigned int line_number)

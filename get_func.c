@@ -13,6 +13,7 @@ void (*get_func(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"push", _push}, {"pall", _pall}, {NULL, NULL}};
 
 	int i = 0;
+
 	if (!opcode)
 		return (NULL);
 

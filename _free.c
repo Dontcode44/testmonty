@@ -2,8 +2,7 @@
 
 /**
  * free_stack - Free all from stack
- *
- *
+ * @stack: Stack
  */
 void free_stack(stack_t **stack)
 {
